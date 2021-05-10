@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    body {margin: 0; padding: 0; box-sizing: border-box;}
+    div {background-color: aqua; padding-left: 0;}
+</style>
+
+<body>
+    <div>
+        <p id="test">Dies ist ein Para.</p>
+        <p id="test2">Dies ist ein 2. Para.</p>
+        <input type="text"/>
+        <p id="#test4">HALLO</p>
+        <h1>BYBYE</h1>
+    </div>
+    <script>
+        //#11 AJAX und Jquery
+        //RESTful API (externe Daten, die im Internet liegen, ziehen)
+        $(document).ready(() => {
+            $("div").click(function(){
+
+                //Get Request
+               $.ajax({
+                    type: 'GET',  //Blockiert von CORS policy
+                    url: 'mydata.json',
+                    dataType: 'json',
+                    success: (data) => {
+                        window.alert(data[0].firstName +  " " + data[0].lastName);
+                        //$("#test").html(data[0].firstName +  " " + data[0].lastName); //Text im p ändern
+                    }
+               });
+            });
+        });
+    </script>
+</body>
+</html>

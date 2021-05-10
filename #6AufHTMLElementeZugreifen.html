@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="test">Dies ist ein Para.</p>
+        <p id="test2">Dies ist ein 2. Para.</p>
+        <input type="text"/>
+        <p id="#test4">HALLO</p>
+        <h1>BYBYE</h1>
+    </div>
+    <script>
+        //#6 auf HTML Elemente zugreifen 
+        //Texte verändern
+        $(document).ready(() => {
+            $("#test").click(function(){
+                var neuerText = $(this).text();
+                $(this).text(neuerText + " -/")
+            });
+        });
+
+        //Html ausgeben lassen
+        $(document).ready(() => {
+            $("body").click(function(){
+                alert($(this).html());
+            });
+        });
+
+        //Html verändern
+        $(document).ready(() => {
+            $("div").click(function(){
+                //$(this).html("<p>Neuer Inhalt</p>"); //Neuer Body
+            });
+        });
+
+        //Values ausgeben von Inputs
+        $(document).ready(() => {
+            $("input").click(function(){
+                alert($(this).val());
+            });
+        });
+    </script>
+</body>
+</html>

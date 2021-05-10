@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="test">Dies ist ein Para.</p>
+        <p id="test2">Dies ist ein 2. Para.</p>
+        <input type="text"/>
+        <p id="#test4">HALLO</p>
+        <h1>BYBYE</h1>
+    </div>
+    <script>
+        //#7 Attribute verändern
+        //Stylesheet wechseln per Methode
+        $(document).ready(() => {
+            $("input").click(function(){
+                $("link").attr("href", "style2.css"); //'link[href="style1.css"]' (möchte nur diesen Link ersetzen)
+            });
+        });
+    </script>
+</body>
+</html>

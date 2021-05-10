@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="test2">Dies ist ein 2. Para.</p>
+    <input type="text"/>
+    <p id="#test4">HALLO</p>
+    <script>
+        //#4 Verschwinde Effekte
+        //.hide, .toggle, .fadeIn/.fadeOut/.fadeToggle/.fadeTo(1000, 0.5), .slideDown/.slideUp/.slideToggle
+        $(document).ready(() => {
+            $("#test4").click(function(){
+                $(this).hide(5000); //5 Sek.(wie Fade)
+            });
+        });
+
+        $(document).ready(() => {
+            $("p").click(function(){ //Toggle on p
+                $("h1").toggle(1000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="test">Dies ist ein Para.</p>
+        <p id="test2">Dies ist ein 2. Para.</p>
+        <input type="text"/>
+        <p id="#test4">HALLO</p>
+        <h1>BYBYE</h1>
+    </div>
+    <script>
+        //#8 After, Before VS Append, Prepend
+        //Ist wie html VS Text
+        $(document).ready(() => {
+            $("#test").click(function(){
+                $(this).prepend("Dieser Text ist hier"); //Bei after/before: Erstellt den neuen Text als neuen Para. / Bei append/prepend: gehört noch zum alten Text
+            });
+        });
+    </script>
+</body>
+</html>
